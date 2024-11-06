@@ -111,7 +111,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
     gap: 20px;
-    width: 80%; /* Ajustez selon votre préférence */
+    width: 80%; /* ajuster à volonté */
 }
 
 .list-item {
@@ -132,25 +132,26 @@ body {
 }
 
 .list-item:hover img {
-    opacity: 0.3; /* Atténue l'image au survol */
+    opacity: 0.5; /* atténuer l'image au survol */
 }
 
 .list-item a::before {
-    content: attr(alt); /* Affiche le texte alternatif */
+    content: attr(data-alt);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 1.2em;
+    color: #1c0123;
+    font-size: 2em;
     font-weight: bold;
+    font-family: "Shadows Into Light Two", cursive;
+
     opacity: 0;
     transition: opacity 0.3s ease;
     white-space: nowrap;
+    z-index: 1;
 }
-.list-item:hover a::before {
-    opacity: 1; /* Rends le texte visible au survol */
-}
+
 .list-item p {
     padding: 15px;
     font-size: 1em;
@@ -158,7 +159,7 @@ body {
 }
 
 .list-item:hover {
-    transform: translateY(-5px); /* effet de survol */
+    transform: translateY(-5px); /* survol */
 }
 
 .list-item a {
@@ -166,10 +167,13 @@ body {
     text-decoration: none;
 }
 
+.list-item:hover a::before {
+    opacity: 1; /* afficher le texte au survol */
+}
 .list-item img {
     width: 100%;
-    height: 200px; /* Fixe la hauteur des images pour un affichage uniforme */
-    object-fit: cover; /* Ajuste l'image pour qu'elle couvre toute la zone */
+    height: 200px;
+    object-fit: cover; /* ajuster l'image pour qu'elle couvre toute la zone */
 }
 
 .list-item p {
@@ -208,47 +212,3 @@ body {
     color: #666;
 }
 
-
-
-
-
-
-
-/* 
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 80%;
-}
-
-.grid-item {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.grid-item:hover {
-    transform: translateY(-5px);
-}
-
-.grid-item a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.grid-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.grid-item p {
-    padding: 15px;
-    font-size: 1em;
-    font-weight: bold;
-} */
