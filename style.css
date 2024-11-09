@@ -8,16 +8,21 @@ body {
     background-color: #e5e7f8;
 }
 
+/* Index page */
 .navsection {
-    top:0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
     background-color: rgb(227, 228, 232) ;
     width:auto;
-    height: 105px;
+    height: 82px;
     
 }
 
 .navbar {
-    background-color: #e2e2ed;
+    background-color: #757462 ;
     /* padding: 10px 20px; */
     display: flex;
     align-items: center;
@@ -27,9 +32,7 @@ body {
 }
 .logo {
    
-    height: 80px; 
-    border: 2px solid rgba(10, 59, 149, 0.6); /* Same color as button borders */
-    border-radius: 50%; 
+    height: 80px;  
     padding: 5px; 
     background-color: transparent; 
     /* mix-blend-mode: multiply; */
@@ -41,24 +44,26 @@ body {
     text-decoration: none;
     padding: 15px 20px;
     margin: 0 5px;
-    border: 2px solid rgba(45, 55, 183, 0.6); 
+    border: 2px solid #354341; 
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-.nav-buttons a:hover {
+.nav-buttons a:hover, .nav-buttons a.nav-active {
     border-color: #fff;
     background-color: rgba(174, 137, 76, 0.2);
+    color: #FFFFFF;
 }
+
 
 .banner {
    
     background-image: url(fond.png); 
     background-size: cover;
-    background-position: fixed; 
+    background-position: 50% 73%; 
     background-repeat: no-repeat; 
     height: 400px;
-    margin-top: -3%;
+    margin-top: 82px;
 
 }
 
@@ -71,7 +76,7 @@ body {
 }
 
 .banner-txt {
-    font-size: 4.5em;
+    font-size: 2em;
     text-shadow: 
         -1px -1px 0 #000, 
          1px -1px 0 #000, 
@@ -79,23 +84,31 @@ body {
          1px  1px 0 #000;
     font-family: "Gloria Hallelujah", cursive;
     font-style: normal;
-    font-weight: 1000;
     color: #ebdfd9;
+    margin-left: -350px;
 }
 
 
-.slogan {
-    color: rgba(231, 197, 142, 0.822);
-    font-size: 1.9em;
-    font-weight: bold;
-    padding-top: 10%;
-    text-shadow: 
-        -1px -1px 0 #000, 
-         1px -1px 0 #000, 
-        -1px  1px 0 #000, 
-         1px  1px 0 #000; 
-}
+.content > p {
+    color: #06242d ;
+    font-size: 2em;
+    font-family: "Geist Mono", monospace;
+    width: 100%;
+    height: fit-content;
+    display: block;
+    padding: 10px;
+    text-shadow: 4px 4px 20px #FDFAFF;
+} 
 
+.slogan-1 {
+    margin-left: -200px;
+}
+.slogan-2 {
+    margin-left: -130px;
+}
+.slogan-3 {
+    margin-left: 150px;
+}
 .contenu {
 
     font-family: Arial, sans-serif;
@@ -121,7 +134,7 @@ body {
     position: relative;
     overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .list-item img {
@@ -145,7 +158,6 @@ body {
     font-size: 2em;
     font-weight: bold;
     font-family: "Shadows Into Light Two", cursive;
-
     opacity: 0;
     transition: opacity 0.3s ease;
     white-space: nowrap;
@@ -157,9 +169,11 @@ body {
     font-size: 1em;
     font-weight: bold;
 }
-
+.list-item h3 {
+    padding: 7px;
+}
 .list-item:hover {
-    transform: translateY(-5px); /* survol */
+    transform: translateY(-10px); /* survol */
 }
 
 .list-item a {
@@ -192,17 +206,16 @@ body {
 }
 
 .top-txt {
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 2em;
+    margin: 20px;
+    font-family: "Geist Mono", monospace;
+    color: #3D4937;
 }
 
 .question {
     font-size: 2em;
-    font-family: "Gloria Hallelujah", cursive;
-    font-style: normal;
-    font-weight: 1000;
-    color: #3a1505;
+    font-family: "Geist Mono", monospace;
+    color: #3D4937;
     margin-bottom: 10px;
     padding: 10px;
 }
@@ -211,4 +224,132 @@ body {
     font-size: 1em;
     color: #666;
 }
+.call-to-action {
+    transition: all 0.4s ease;
+    background-color:#95190C;
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+} 
+.call-to-action:hover {
+    bottom:30px;
+}
+.call-to-action a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+.call-to-action a::before {
+    content: " ";
+    background-image: url("icn-test.png");
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: 32px;
+}
+footer {
+    background: rgb(10,36,43);
+    background: linear-gradient(90deg, rgba(10,36,43,1) 16%, rgba(117,116,98,1) 100%);
+    display: flex;
+    justify-content: space-around;
+    color: #FFFFFF;
+    font-size: 0.8em;
+    width: 100%;
+    margin: 0;
+    margin-top: 50px;
+    padding: 50px;
+}
+footer h2 {
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 
+}
+footer h3 {
+    font-family: "Gloria Hallelujah", cursive;
+    font-style: normal;
+    font-size: 2em;
+    display: inline;
+    position: relative;
+    top: -15px;
+    left: 10px; 
+}
+footer ul {
+    list-style-type: none;
+}
+.footer-col1 {
+    width: 30%;
+    vertical-align: top;
+    margin:20px;
+}
+.footer-col1 p {
+    margin-top: 20px;
+}
+.social-icons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 120px;
+}
+.logo-footer-container {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: fit-content;
+    padding: 10px;
+    display: inline-block;
+}
+.logo-footer-container img {
+    width: 50px;
+    display: inline-block;
+}
+.footer-col2 {
+    width: 30%;
+    vertical-align: top;
+    margin:20px;
+
+}
+.footer-col3 {
+    width: 30%;
+    vertical-align: top;
+    margin:20px;
+}
+.footer-col3 img {
+    width: 100px;
+    background: #ffffff;
+    display: block;
+    margin: 5px;
+}
+
+/* Test page */
+.banner-test {
+    background-position: 50% 76%;
+    height: 200px;
+    background-image: url(banner-test.png); 
+
+}
+.test-container {
+    width: 800px;
+    margin: auto;
+    display: block;
+}
+.test-container p {
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.test-container input[type="radio"] {
+    margin-right: 10px;
+}
+.test-container li {
+    padding-bottom: 20px;
+}
+.test-container input[type="submit"] {
+    background-color: #95190C;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
